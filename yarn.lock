@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-camera-controls@^1.21.0:
-  version "1.21.0"
-  resolved "https://registry.yarnpkg.com/camera-controls/-/camera-controls-1.21.0.tgz#1097a762e2c6d01fde71982a48d5faef24b26a04"
-  integrity sha512-obh0EhNwUyYB6rNnisHAas7IYqEmC9nVXx8hTXphy/PTsdxSmf66V5vbQG/7+NRDFTLRWW7b/KoPB49gRLdqdw==
-
 three@^0.115.0:
   version "0.115.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.115.0.tgz#540d800c381b9da2334c024f0fbe4d23f84eb05e"

@@ -80,7 +80,7 @@ class SceneController {
   createCamera() {
     const { width, height } = this.getDimensions();
     this.camera = new THREE.PerspectiveCamera(45, width / height, 10, 10000);
-    this.camera.up = new THREE.Vector3(0, 0, 1);
+    this.camera.position.set(0, 20, 100);
   }
 
   // Renderer
@@ -104,15 +104,7 @@ class SceneController {
   // Controls
 
   createControls() {
-    CameraControls.install({ THREE });
-    this.controls = new CameraControls(this.camera, this.el);
-    this.clock = new THREE.Clock();
-    this.controls.minDistance = 10;
-    this.controls.maxPolarAngle = Math.PI / 2.2;
-    this.controls.dampingFactor = .15;
-    this.controls.draggingDampingFactor = .15;
-    this.controls.verticalDragToForward = true;
-    this.controls.truckSpeed = 2;
+    this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
   }
 
   getDimensions() {
@@ -130,9 +122,8 @@ class SceneController {
   }
 
   render = () => {
-    const delta = this.clock.getDelta();
+    this.controls.update();
     this.renderer.render(this.scene, this.camera);
-    this.controls.update(delta);
   }
 
   onAnimationFrame = () => {
