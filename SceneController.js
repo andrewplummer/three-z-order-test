@@ -26,6 +26,7 @@ class SceneController {
 
         this.scene.traverse((obj) => {
           if (obj instanceof THREE.Mesh) {
+            // Disabling this won't produce the trasparency issue
             obj.material = new THREE.MeshToonMaterial({
               transparent: true,
               opacity: obj.material.opacity,
