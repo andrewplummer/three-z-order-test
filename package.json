@@ -1,0 +1,11 @@
+{
+  "name": "z-order-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrew Plummer <plummer.andrew@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "camera-controls": "^1.21.0",
+    "three": "^0.115.0"
+  }
+}
